@@ -1,0 +1,111 @@
+header {
+    background-image: url("img/joysticks-6603119_1920.jpg");
+    background-position: center 45%;
+}
+
+.text1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+
+.text1 a {
+    position: relative;
+    top: 26px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #3d3d60;
+    border: 1px black solid;
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+} 
+
+.text1 a:hover {
+    transition: all 1s ease;
+    background-color: rgb(62, 110, 76);
+}
+
+.formulaire label,
+input {
+    margin-bottom: 10px;
+}
+
+.formulaire {
+    border-radius: 20px;
+    border: white 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 450px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: darkslategrey;
+}
+
+
+label {
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-family: 'Belanosima';
+}
+
+input,
+textarea {
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    color: #000000;
+   
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+input[type="submit"],input[type="reset"] {
+    margin-top: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 5px 0px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Agdasima;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: aqua;
+    transition: all 1s ease;
+    
+}
+input[type="reset"]:hover {
+    background-color: darkred;
+    transition: all 1s ease;
+    
+}
+
+.form {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 480px) {
+    
+}

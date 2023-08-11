@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    background-color: rgb(71, 71, 71);
+}
+
+header {
+    font-family: Belanosima;
+    padding: 25px 0px;
+    background: linear-gradient(333deg, #3d3d60 0%, rgb(78, 78, 78) 46%, rgb(62, 110, 76) 100%);
+    /* display: block; */
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    border-bottom: 2px groove white;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 50px;
+}
+
+nav {
+    width: auto;
+    margin-right: 50px;
+}
+
+nav ul,
+li {
+
+    display: flex;
+    flex-direction: row;
+}
+
+nav a {
+    margin: 5px;
+    padding: 10px 10px;
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 10px black;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    transition: all 1s ease;
+}
+
+#border-nav {
+    border-left: 2px rgb(255, 255, 255) solid;
+    border-right: 2px rgb(255, 255, 255) solid;
+}
+
+.main {
+    background-color: rgb(170, 170, 170);
+    width: 80%;
+    margin: 150px auto;
+    height: auto;
+    top: 140px;
+    border-radius: 0 0px 10px 10px;
+    box-shadow: 5px 5px 20px black;
+}
+
+header .navbar .logo img {
+    height: auto;
+    min-width: 50px;
+    width: 113px;
+    position: absolute;
+    top: 5px;
+    left: 30px;
+
+}
+
+.name-site h1 {
+    font-family: Bebas Neue;
+    font-size: 80px;
+    position: absolute;
+    top: 42px;
+    left: 100px;
+    color: lightgray;
+    text-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.062),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.089),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.11),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.131),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.158),
+        100px 100px 80px rgba(0, 0, 0, 0.22);
+    ;
+}
+
+h1 {
+    font-family: 'Agdasima';
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+}
+
+.footer {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(black, grey);
+    border-top: rgb(255, 255, 255) 1px solid;
+    width: 100%;
+    z-index: 1001;
+}
+
+.footer-left {
+    width: 50%;
+    height: auto;
+
+}
+
+.footer-right {
+    width: 50%;
+    height: auto;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.icon {
+    text-shadow: 2px 2px 10px black;
+    width: 50%;
+    margin: 50px auto;
+
+}
+
+.icon a {
+    font-size: 25px;
+    color: white;
+}
+
+.icon a:hover {
+    text-decoration: underline;
+}
+
+.icon i {
+    font-size: 50px;
+    color: white;
+}
+
+.icon h3 {
+    margin-bottom: 15%;
+    color: white;
+    border-bottom: 1px solid white;
+    width: 143px;
+}
+
+#google-map {
+    position: relative;
+    left: 25%;
+    top: 10%;
+    width: 50%;
+    height: 80%;
+}
+
+#burger {
+    position: absolute;
+    right: 41px;
+    top: 46px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: #00000098 1px 1px;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    #burger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 200px;
+        margin: 0 auto;
+        display: none;
+    }
+
+    nav a {
+        display: block;
+        margin: 0px 0;
+        margin-left: 0;
+        background-color: rgb(114, 113, 113);
+        border: 1px solid white;
+    }
+
+    .logo img {
+        display: none;
+    }
+
+    nav.open {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 10px;
+        width: 75%;
+        right: -150px;
+    }
+
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-right {
+        border-left: 1px solid transparent;
+    }
+
+    .footer-left {
+        width: 70%;
+        height: auto;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    #border-nav {
+        border-left: 2px transparent solid;
+        border-right: 2px transparent solid;
+    }
+
+    nav ul,
+    li {
+        flex-direction: column;
+        margin: 5px;
+
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+
+    .icon a  {
+        font-size: 10px;
+    }
+
+    nav.open {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        top: 10px;
+        width: 75%;
+        right: -11px;
+    }
+
+    .name-site h1 {
+        left: 15px;
+}
+}
