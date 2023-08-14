@@ -5,7 +5,7 @@ aside {
     position: fixed;
     left: 0;
     top: 30%;
-    width: 169px;
+    width: 9%;
     height: auto;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@ aside h4 {
     padding: 15px;
     border: 1px solid black;
     border-radius: 10px;
-    width: auto;
+    width: 35%;
     box-shadow: 5px 5px 20px black;
     background-color: lightgray;
 }
@@ -67,9 +67,12 @@ aside h4 {
 
 }
 
+.img1 {
+    text-align: center;
+}
+
 .img1 img {
-    margin: 0 auto;
-    width: 300px;
+    width: 50%;
     height: auto;
 }
 
@@ -83,27 +86,24 @@ aside h4 {
 .text2 {
     width: 50%;
     text-align: center;
-    margin-top: 50px;
+    margin: auto 0;
     border-left: 1px groove rgba(0, 0, 0, 0.274);
 }
 
 .text2 h2 {
     margin-bottom: 10px;
     text-decoration: underline;
+    text-align: center;
 }
 
 
 .li-service {
-    margin: 10px auto;
-    position: relative;
-    left: 330px;
     font-size: 20px;
-
-
 }
 
 .text2 ul {
     margin-bottom: 30px;
+    margin-left: 320px;
 }
 
 .text2 a {
@@ -122,13 +122,14 @@ aside h4 {
 
 .img2 {
     width: 50%;
-    height: auto;
+    height: 100%
 }
 
 .img2 img {
-    position: absolute;
-    left: 295px;
-    top: 563px;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: center 50%;
+    margin: 0 auto;
 }
 
 .s-contact {
@@ -159,7 +160,6 @@ aside h4 {
 
 .movie {
     width: 50%;
-    justify-content: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -167,14 +167,34 @@ aside h4 {
     .presentation,
     .s-service,
     .s-contact {
-        width: 95%;
+        width: 100%;
+    }
+
+    .s-service {
+        margin-top: 20px;
+    }
+
+    .text1 p {
+        margin-top: 30px;
+
+    }
+
+
+
+    .img1 img {
+        position: relative;
+        top: 40px;
+        width: 100%;
+
+    }
+
+    .img2 {
+        height: 100%
     }
 
     .img2 img {
-        z-index: 1;
-        width: 45%;
-        left: -31px;
-        top: 753px;
+        margin-top: 20px;
+        padding: 10px;
     }
 
     .s-contact2 {
@@ -200,6 +220,17 @@ aside h4 {
         display: none;
     }
 
+    .text2 {
+
+        border-left: 1px groove transparent;
+    }
+
+    .text2 ul {
+        margin-bottom: 30px;
+        margin-left: 0;
+
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -208,7 +239,24 @@ aside h4 {
     .s-service,
     .s-contact {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .s-contact {
+        margin-top: 30px;
+    }
+
+    .s-contact2 {
+
+        padding: 0 5px;
+    }
+
+    .presentation {
+        width: 100%;
+
+    }
+
+    .img1 img {
+        position: static;
     }
 
     .text1,
@@ -216,7 +264,7 @@ aside h4 {
         margin-right: auto;
         margin-bottom: 10px;
         width: 90%;
-        margin-left: 33px;
+        margin-left: 28px;
     }
 
     .movie iframe {
@@ -229,6 +277,7 @@ aside h4 {
     }
 
     .text2 {
+        width: 100%;
         border-left: 1px groove transparent;
     }
 
@@ -237,18 +286,31 @@ aside h4 {
 
     }
 
+
+    .text2 ul {
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+
     .text3 {
         width: 100%;
     }
 
+    .img2 {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        text-align: center;
+
+    }
+
     .img2 img {
-        position: relative;
-        left: -17px;
-        top: 66px;
-        width: 250px;
+        width: 80%;
+        margin-top: 50px;
+
     }
 
     .text1 p {
         margin-top: 19px;
-      }
+    }
 }

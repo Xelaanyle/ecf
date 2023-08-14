@@ -141,7 +141,6 @@ iframe {
 .footer-left {
     width: 50%;
     height: auto;
-
 }
 
 .footer-right {
@@ -154,7 +153,6 @@ iframe {
     text-shadow: 2px 2px 10px black;
     width: 50%;
     margin: 50px auto;
-
 }
 
 .icon a {
@@ -175,7 +173,7 @@ iframe {
     margin-bottom: 15%;
     color: white;
     border-bottom: 1px solid white;
-    width: 143px;
+    width: 110px;
 }
 
 #google-map {
