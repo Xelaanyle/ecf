@@ -5,7 +5,7 @@ aside {
     position: fixed;
     left: 0;
     top: 30%;
-    width: 9%;
+    width: 120px;
     height: auto;
     justify-content: center;
     align-items: center;
@@ -46,6 +46,7 @@ aside h4 {
     border: 1px solid black;
     border-radius: 10px;
     width: 35%;
+    height: auto;
     box-shadow: 5px 5px 20px black;
     background-color: lightgray;
 }
@@ -63,17 +64,19 @@ aside h4 {
 
 .text1 p {
     margin-top: 70px;
-
-
 }
 
 .img1 {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img1 img {
-    width: 50%;
-    height: auto;
+
+    width: 60%;
+    object-fit: scale-down;
+    object-position: center;
 }
 
 .s-service {
@@ -176,16 +179,7 @@ aside h4 {
 
     .text1 p {
         margin-top: 30px;
-
-    }
-
-
-
-    .img1 img {
-        position: relative;
-        top: 40px;
-        width: 100%;
-
+        font-size: 15px;
     }
 
     .img2 {
@@ -212,8 +206,8 @@ aside h4 {
     }
 
     .movie {
-        position: relative;
-        left: -81px;
+        width: 100%;
+        text-align: center;
     }
 
     aside {
@@ -299,7 +293,6 @@ aside h4 {
     .img2 {
         width: 100%;
         height: auto;
-        object-fit: cover;
         text-align: center;
 
     }
