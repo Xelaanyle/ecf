@@ -73,6 +73,7 @@ nav a:hover {
     top: 140px;
     border-radius: 0 0px 10px 10px;
     box-shadow: 5px 5px 20px black;
+    padding: 5px;
 }
 
 header .navbar .logo img {
