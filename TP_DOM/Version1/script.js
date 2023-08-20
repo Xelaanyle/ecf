@@ -10,6 +10,28 @@ boutonToggle.addEventListener("click", () => {
     reinitialiserSaisies();
 });
 
+function couleurPourValeur(valeur) {
+    switch (valeur) {
+        case "1": return "red";
+        case "2": return "orange";
+        case "3": return "yellow";
+        case "4": return "green";
+        default: return "green";
+    }
+}
+
+function reinitialiserSaisies() {
+    inputs.forEach(input => {
+        if (modeCouleur) {
+            input.value = "";
+            input.style.backgroundColor = couleurPourValeur(input.value);
+        } else {
+            input.style.backgroundColor = "white";
+        }
+        input.removeAttribute("hidden"); 
+    });
+}
+
 inputs.forEach(input => {
     input.addEventListener("input", function () {
         const valeurActuelle = this.value;
@@ -57,25 +79,3 @@ inputs.forEach(input => {
         }
     });
 });
-
-function couleurPourValeur(valeur) {
-    switch (valeur) {
-        case "1": return "red";
-        case "2": return "orange";
-        case "3": return "yellow";
-        case "4": return "green";
-        default: return "green";
-    }
-}
-
-function reinitialiserSaisies() {
-    inputs.forEach(input => {
-        if (modeCouleur) {
-            input.value = "";
-            input.style.backgroundColor = couleurPourValeur(input.value);
-        } else {
-            input.style.backgroundColor = "white";
-        }
-        input.removeAttribute("hidden"); 
-    });
-}
