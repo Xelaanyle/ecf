@@ -1,16 +1,17 @@
 const boutonToggle = document.getElementById("bouton-toggle");
 const tableauNote = document.getElementById("tableau-note");
 const inputs = tableauNote.querySelectorAll("input");
-let modeCouleur = false;
+let modeCouleur = true;
 
 boutonToggle.addEventListener("click", () => {
     modeCouleur = !modeCouleur;
+    console.log("mode couleur : " + modeCouleur)
     boutonToggle.textContent = modeCouleur ? "Mode couleur" : "Mode note";
     reinitialiserSaisies();
 });
 
 inputs.forEach(input => {
-    input.addEventListener("input", () => {
+    input.addEventListener("input", function () {
         const valeurActuelle = this.value;
         
         if (modeCouleur) {
@@ -22,6 +23,7 @@ inputs.forEach(input => {
             }
             
             input.style.backgroundColor = couleurPourValeur(valeurActuelle);
+
             const celluleParente = input.parentElement;
             const ligneSuivante = celluleParente.parentElement.nextElementSibling;
             if (ligneSuivante) {
