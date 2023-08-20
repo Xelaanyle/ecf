@@ -1,7 +1,7 @@
 const boutonToggle = document.getElementById("bouton-toggle");
 const tableauNote = document.getElementById("tableau-note");
 const inputs = tableauNote.querySelectorAll("input");
-let modeCouleur = true;
+let modeCouleur = false;
 
 boutonToggle.addEventListener("click", () => {
     modeCouleur = !modeCouleur;
@@ -10,7 +10,7 @@ boutonToggle.addEventListener("click", () => {
     reinitialiserSaisies();
 });
 
-function couleurPourValeur(valeur) {
+function couleurValeur(valeur) {
     switch (valeur) {
         case "1": return "red";
         case "2": return "orange";
@@ -24,7 +24,7 @@ function reinitialiserSaisies() {
     inputs.forEach(input => {
         if (modeCouleur) {
             input.value = "";
-            input.style.backgroundColor = couleurPourValeur(input.value);
+            input.style.backgroundColor = couleurValeur(input.value);
         } else {
             input.style.backgroundColor = "white";
         }
@@ -44,7 +44,7 @@ inputs.forEach(input => {
                 return;
             }
             
-            input.style.backgroundColor = couleurPourValeur(valeurActuelle);
+            input.style.backgroundColor = couleurValeur(valeurActuelle);
 
             const celluleParente = input.parentElement;
             const ligneSuivante = celluleParente.parentElement.nextElementSibling;
@@ -71,6 +71,9 @@ inputs.forEach(input => {
                 }
             }
         }
+        setTimeout(() => {
+            input.blur();
+        },1000)
     });
     
     input.addEventListener("blur", () => {
@@ -79,3 +82,4 @@ inputs.forEach(input => {
         }
     });
 });
+
