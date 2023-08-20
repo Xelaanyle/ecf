@@ -10,12 +10,12 @@ boutonToggle.addEventListener("click", () => {
 });
 
 inputs.forEach(input => {
-    input.addEventListener("input", function () {
+    input.addEventListener("input", () => {
         const valeurActuelle = this.value;
         
         if (modeCouleur) {
-            const estValeurValideCouleur = /^[1-4]$/.test(valeurActuelle);
-            if (!estValeurValideCouleur) {
+            const valideCouleur = /^[1-4]$/.test(valeurActuelle);
+            if (!valideCouleur) {
                 alert("Veuillez entrer une valeur entre 1 et 4 pour la couleur.");
                 input.value = "";
                 return;
@@ -31,15 +31,15 @@ inputs.forEach(input => {
                 }
             }
         } else {
-            const estValeurValideNote = /^[1-5]$/.test(valeurActuelle);
-            if (!estValeurValideNote) {
+            const valideNote = /^[1-5]$/.test(valeurActuelle);
+            if (!valideNote) {
                 alert("Veuillez entrer une valeur entre 1 et 5 pour la note.");
                 input.value = "";
                 return;
             }
             
-            const celluleParente = input.parentElement;
-            const ligneSuivante = celluleParente.parentElement.nextElementSibling;
+            const colonneParente = input.parentElement;
+            const ligneSuivante = colonneParente.parentElement.nextElementSibling;
             if (ligneSuivante) {
                 const prochaineSaisie = ligneSuivante.querySelector("input");
                 if (prochaineSaisie) {
@@ -49,7 +49,7 @@ inputs.forEach(input => {
         }
     });
     
-    input.addEventListener("blur", function () {
+    input.addEventListener("blur", () => {
         if (modeCouleur) {
             input.value = "";
         }
@@ -62,7 +62,7 @@ function couleurPourValeur(valeur) {
         case "2": return "orange";
         case "3": return "yellow";
         case "4": return "green";
-        default: return "white";
+        default: return "green";
     }
 }
 
