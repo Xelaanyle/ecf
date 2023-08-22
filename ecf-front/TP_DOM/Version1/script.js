@@ -46,7 +46,6 @@ boutonToggle.addEventListener("click", () => {
 inputs.forEach(input => {
     input.addEventListener("input", function () {
         const valeurActuelle = this.value;
-
         if (modeCouleur) {
             const valideCouleur = /^[1-4]$/.test(valeurActuelle);
             if (!valideCouleur) {
@@ -54,7 +53,6 @@ inputs.forEach(input => {
                 input.value = "";
                 return;
             }
-
             input.style.backgroundColor = couleurValeur(valeurActuelle);
             champSuivant(input);
         } else {
@@ -64,14 +62,12 @@ inputs.forEach(input => {
                 input.value = "";
                 return;
             }
-
             champSuivant(input);
         }
         setTimeout(() => {
             input.blur();
         }, 1000);
     });
-
     input.addEventListener("blur", () => {
         if (modeCouleur) {
             input.value = "";
