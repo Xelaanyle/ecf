@@ -1,15 +1,69 @@
-table,
-td {
-  border: 1px solid #333;
+/* Réinitialisation des marges et des paddings */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
-thead,
-tfoot {
+/* Police de caractères */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Styles pour le tableau */
+table {
+  border-collapse: collapse;
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+thead, tfoot {
   background-color: #333;
-  color: #fff;
+  color: #000;
 }
 
-main, table{
-    text-align: center;
-    margin: 10px auto;
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  font-weight: bold;
+}
+
+/* Couleurs pastel */
+table {
+  background-color: #f7f7f7;
+}
+
+thead, tfoot {
+  background-color: #7f8c8d; /* Gris pastel */
+}
+
+th, td {
+  background-color: #ecf0f1; /* Bleu pastel */
+}
+
+/* Boutons */
+button {
+  background-color: #3498db; /* Bleu pastel */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9; /* Bleu pastel plus foncé */
+}
+
+/* Centrer le tableau verticalement */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
