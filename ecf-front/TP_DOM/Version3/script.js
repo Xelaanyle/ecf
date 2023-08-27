@@ -62,7 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             inputs.forEach(input => {
                 const storageKey = modeCouleur ? `${input.id}_valeurs_couleur` : `${input.id}_valeurs_note`;
+                const storageKeyDevoir1 = `${input.id}_valeurs_couleur`;
+                const storageKeyDevoir2 = `${input.id}_valeurs_note`;
 
+                localStorage.removeItem(storageKeyDevoir1);
+                localStorage.removeItem(storageKeyDevoir2);
                 localStorage.removeItem(storageKey);
 
                 if (modeCouleur) {
@@ -72,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     input.style.backgroundColor = "white";
                 }
             });
-
+            reinitialiserSaisies([...inputsDevoir1, ...inputsDevoir2])
             localStorage.removeItem("valeurs_couleur");
             localStorage.removeItem("valeurs_note");
         });
@@ -83,10 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
         [...inputsDevoir1, ...inputsDevoir2].forEach(input => {
             const storageKeyDevoir1 = `${input.id}_valeurs_couleur`;
             const storageKeyDevoir2 = `${input.id}_valeurs_note`;
-    
+
             localStorage.removeItem(storageKeyDevoir1);
             localStorage.removeItem(storageKeyDevoir2);
-    
+
             if (modeCouleur) {
                 input.style.backgroundColor = couleurValeur(input.value);
             } else {
@@ -94,14 +98,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 input.style.backgroundColor = "white";
             }
         });
-    
+
         localStorage.removeItem("valeurs_couleur");
         localStorage.removeItem("valeurs_note");
     });
 
     // Écouteurs pour les saisies du devoir 1
     inputsDevoir1.forEach(input => {
-        input.addEventListener("keydown", function(event) {
+        input.addEventListener("keydown", function (event) {
             // Gérer les touches spécifiques pour attribuer une valeur
             if (event.key === "&") {
                 event.preventDefault();
@@ -127,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Écouteur pour gérer les saisies et le changement de champ
-        input.addEventListener("input", function() {
+        input.addEventListener("input", function () {
             const valeurActuelle = this.value;
             const storageKey = modeCouleur ? "valeurs_couleur" : "valeurs_note";
 
@@ -165,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Écouteurs pour les saisies du devoir 2
     inputsDevoir2.forEach(input => {
-        input.addEventListener("keydown", function(event) {
+        input.addEventListener("keydown", function (event) {
             // Gérer les touches spécifiques pour attribuer une valeur
             if (event.key === "&") {
                 event.preventDefault();
@@ -191,7 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Écouteur pour gérer les saisies et le changement de champ
-        input.addEventListener("input", function() {
+        input.addEventListener("input", function () {
             const valeurActuelle = this.value;
             const storageKey = modeCouleur ? "valeurs_couleur" : "valeurs_note";
 
