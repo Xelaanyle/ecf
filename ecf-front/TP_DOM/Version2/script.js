@@ -1,6 +1,5 @@
-const boutonToggle = document.getElementById("bouton-toggle");
+
 const tableauNote = document.getElementById("tableau-note");
-const boutonReset = document.getElementById("bouton-reset");
 const inputs = tableauNote.querySelectorAll("input");
 let modeCouleur = true;
 
@@ -50,6 +49,7 @@ function champSuivant(input) {
     }
 };
 
+const boutonToggle = document.getElementById("bouton-toggle");
 boutonToggle.addEventListener("click", () => {
     modeCouleur = !modeCouleur;
     console.log("mode couleur : " + modeCouleur)
@@ -57,6 +57,7 @@ boutonToggle.addEventListener("click", () => {
     reinitialiserSaisies();
 });
 
+const boutonReset = document.getElementById("bouton-reset");
 boutonReset.addEventListener("click", () => {
     inputs.forEach(input => {
         const storageKey = modeCouleur ? `${input.id}_valeurs_couleur` : `${input.id}_valeurs_note`;

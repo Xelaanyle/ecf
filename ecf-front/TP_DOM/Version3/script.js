@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1000);
         });
 
-        // Écouteur pour gérer le flou de l'input
+        // Écouteur pour gérer le blur de l'input
         input.addEventListener("blur", () => {
             if (modeCouleur) {
                 input.value = "";
