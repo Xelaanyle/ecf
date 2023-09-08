@@ -13,3 +13,7 @@ main, table{
     text-align: center;
     margin: 10px auto;
 }
+
+input {
+  text-align: center;
+}
